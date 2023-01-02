@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def poe(a, b):
+def pow(a, b):
     return a ** b
