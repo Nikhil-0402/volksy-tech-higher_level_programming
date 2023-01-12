@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module"""
+""" This module """
 
 
 class Square:
@@ -8,7 +8,7 @@ class Square:
         self.__size = size
     
     def area(self):
-        return self.size__ = self.__size
+        return self.size__ * self.__size
 
     @property
     def size(self):
