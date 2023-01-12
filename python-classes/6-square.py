@@ -4,6 +4,7 @@
 
 class Square:
     """ A code """
+
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
@@ -17,7 +18,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if type(value) !=int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
