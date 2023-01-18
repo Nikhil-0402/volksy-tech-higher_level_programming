@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""to_json_string
-"""
+"""json"""
 import json
 
-def to_json_string(my_obj):
-    """Return JSON format of my_obj
-    """
 
-    return json.dumps(my_obj)
+def save_to_json_file(my_obj, filename):
+    """json dumps"""
+    with open(filename, mode='w', encoding="utf-8") as f:
+        return(f.write(json.dumps(my_obj)))
