@@ -15,5 +15,3 @@ class Student:
     def to_json(self):
         """ retruns data """
         return self.__dict__
-
-
