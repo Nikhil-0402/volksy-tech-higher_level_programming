@@ -6,9 +6,7 @@
 import json
 import csv
 from os import path
-
 class Base:
-
     """A class named Base
     Attributes:
     attr1(__nb_objects): number of objects
