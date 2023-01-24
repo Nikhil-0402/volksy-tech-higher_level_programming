@@ -7,7 +7,7 @@ import json
 import csv
 from os import path
 class Base:
-"""A class named Base
+    """A class named Base
     Attributes:
     attr1(__nb_objects): number of objects
     attr2(id): object id
@@ -16,12 +16,12 @@ class Base:
 
 
     def reset_objects():
-"""Resets number of objects for testing"""
+    """Resets number of objects for testing"""
         Base.__nb_objects = 0
 
 
     def __init__(self, id=None):
-"""Initiliazes an instance"""
+    """Initiliazes an instance"""
         if id is not None:
             self.id = id
         else:
