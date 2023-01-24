@@ -1,33 +1,33 @@
 #!/usr/bin/python3
-
 """This module creates the Base class"""
 
 
 import json
 import csv
 from os import path
+
+
 class Base:
     """A class named Base
     Attributes:
     attr1(__nb_objects): number of objects
     attr2(id): object id
     """
+
     __nb_objects = 0
 
-
     def reset_objects():
-    """Resets number of objects for testing"""
+        """Resets number of objects for testing"""
+
         Base.__nb_objects = 0
 
-
     def __init__(self, id=None):
-    """Initiliazes an instance"""
+        """Initiliazes an instance"""
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
-
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -41,7 +41,6 @@ class Base:
             list_dictionaries.append(model.to_dictionary())
         with open(cls.__name__ + ".json", "w",  encoding='utf-8') as file:
             file.write(Base.to_json_string(list_dictionaries))
-
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -57,7 +56,6 @@ class Base:
                 for model in list_objs:
                     writer.writerow(model.to_dictionary())
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """converts list of dictionaries to json string"""
@@ -65,14 +63,12 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-
     @staticmethod
     def from_json_string(json_string):
         """converts json string to object"""
         if json_string is None:
             return []
         return json.loads(json_string)
-
 
     @classmethod
     def create(cls, **dictionary):
